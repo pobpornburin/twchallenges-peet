@@ -1,0 +1,6 @@
+.aboutme-hgroup h1 {
+  background-image: -webkit-linear-gradient(top, #333333 0%, #000000 100%);
+  background-image: linear-gradient(to bottom, #333333 0%, #000000 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#ff000000', GradientType=0);
+}

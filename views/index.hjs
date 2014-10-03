@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ title }}</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="/bootstrap/dist/css/bootstrap.css" />
+  </head>
+  <body>
+	<article class="introduction">
+	</article>
+	<div id="sampleArea"></div>
+	<script src="/jquery/dist/jquery.min.js"></script>
+    <script src="/mustache/mustache.js"></script>
+	<script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="http://twitter.github.com/hogan.js/builds/3.0.1/hogan-3.0.1.js"></script>
+	<script type="text/template" id="aboutme">
+		<h1>{{name}} - {{company}}</h1>
+		<p>Blog: {{blog}}</p>
+	</script>
+    <script type="text/javascript">
+		$(function() {
+		// 	$.getJSON("data.json", function(data) {
+		// 		var template = $("#aboutme").html();
+		// 		console.log(template);
+		// 		var content = Mustache.to_html(template, data); 
+		// 		console.log(data);
+		// 		console.log(content);
+		// 		$('.introduction').html(content);
+		// 	});
+			var person = {
+			    firstName: "Christophe",
+			    lastName: "Coenraets",
+			    blogURL: "http://coenraets.org"
+			};
+			console.log(person);
+			var template = "<h1>{{firstName}} {{lastName}}</h1>Blog: {{blogURL}}"; console.log(template);
+			var html = Mustache.to_html(template, person); console.log(html);
+			$('#sampleArea').html(html);
+		});
+	</script>
+  </body>
+</html>
